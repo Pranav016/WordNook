@@ -3,11 +3,11 @@
 <h1>Home</h1>
 <p> <%= homeStartingContent %> </p> 
 
-<% for(i=0; i < posts.length; i++){ %>
+<% posts.forEach(function (post) { %>
     <div class="post">
-        <h1> <%= posts[i].title %> </h1>
-        <p> <%= posts[i].content %> </p>
+        <h1> <%= post.title %> </h1>
+        <p> <%= post.content %> </p>
     </div>
-<% } %>
+<% }); %>
 
 <%- include("partials/footer") -%>

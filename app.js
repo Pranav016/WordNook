@@ -17,7 +17,10 @@ app.use(express.static("public"));
 const posts = [];
 
 app.get("/", function(req, res){
-  res.render("home", {homeStartingContent: homeStartingContent, posts: posts});
+  res.render("home", {
+    homeStartingContent: homeStartingContent,
+    posts: posts
+  });
 });
 
 app.get("/about", function(req, res){
@@ -41,8 +44,14 @@ app.post("/compose", function(req, res){
   res.redirect("/");
 });
 
-
-
+app.get("/posts/:postName", function(req, res){
+  const requestedTitle = req.params.postName;
+  posts.forEach(function(post){
+    if(post.title === requestedTitle){
+      console.log("Match Found!");
+    }
+  })
+});
 
 app.listen(3000, function() {
   console.log("Server started on port 3000");
