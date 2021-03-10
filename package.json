@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
+  "engines": {
+    "node": "14.15.1"
+  },
   "scripts": {
     "test": "jest",
     "start": "nodemon app.js"
@@ -20,6 +23,7 @@
     "jsonwebtoken": "^8.5.1",
     "lodash": "^4.17.21",
     "mongoose": "^5.11.17",
-    "nodemon": "^2.0.7"
+    "nodemon": "^2.0.7",
+    "package-lock": "^1.0.5"
   }
 }
