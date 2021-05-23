@@ -1,0 +1,28 @@
+<div class="row">
+    <% posts.forEach(function (post) { %>
+        <div class="post-preview col-lg-5 mx-md-auto mb-5">
+            <div class="my-1">
+                <a href="/author/<%= post.author._id %> " class="mb-4 fw-bold f-size-22px">
+                    <i class="fas fa-user"></i>
+                    <%= post.author.userName %> 
+                </a>
+            </div><hr>
+            <h1 class="fw-bold f-size-2-4rem"> <%= post.blogTitle %> </h1>
+            <p class="post-date-font">Posted on <%= moment(new Date(post.timestamps)).format("dddd, MMMM Do YYYY, h:mm:ss a") %> </p>
+            <% if (post.category) { %>
+                <div class="badge badge-pill badge-danger py-1 px-2">
+                    <%= post.category %> 
+                </div>
+            <% } %>
+            <p class="text-muted d-flex">
+                <%- post.blogContent.substring(0,50) %> <span>...</span>
+            </p>
+            <div class="mt-2">
+                <a href="/posts/<%= post._id %>"><button class="button read">Read More</button></a>
+                <i class="fa fa-comment fa-2x float-end" aria-hidden="true"><%= post.comments.length %></i>
+                <i class="fas fa-thumbs-up fa-2x float-end px-2" aria-hidden="true"><%= post.likes %></i>
+            </div>
+            
+        </div>
+    <% }); %>
+</div>

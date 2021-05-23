@@ -1,0 +1,60 @@
+<%- include("../partials/header", {isAuthenticated}) -%>
+
+<!-- compose/write a new post section -->
+<div class="container-centre">
+    <h1 class="heading-centre heading-bold normal-heading-font">Compose</h1>
+    <form action="/compose" method="POST" enctype="multipart/form-data" class="  compose-form">
+        <div class="form-group">
+            <label class="compose-title">Title</label>
+            <input class="form-control col-md-12 col-sm-12 col-xs-12" type="text" name="postTitle" autocomplete="off" required></input>
+        </div>
+        <div class="form-group">
+            <label class="compose-status">Status</label>
+            <select
+              type="text"
+              name="status"
+              class="form-control col-md-12 col-sm-12 col-xs-12"
+              required
+            >
+                <option value="Public">Public</option>
+                <option value="Private">Private</option>
+            </select>
+            <p class="text-muted px-2">
+              <strong>TIP:</strong>
+              Save your posts in private status to save them as drafts.
+            </p>
+        </div>
+        <div className="form-group">
+            <label class="compose-category">Category:</label>
+            <select
+              type="text"
+                name="category"
+              class="form-control col-md-12 col-sm-12 col-xs-12"
+              required
+            >
+            <option value="" disabled hidden selected>Select a category</option>
+            <% categories.forEach(item => { %>
+                <option value="<%= item %>">
+                  <%= item %> 
+                </option>
+            <% }) %>
+            </select>
+          </div>
+        <div class="form-group">
+            <label class="compose-post">Post</label>
+            <textarea class="form-control" type="text" name="postBody" rows="3" autocomplete="off" required></textarea>
+            <script>
+                window.onload = function() {
+                   CKEDITOR.replace('postBody');
+                };
+            </script>
+        </div>
+        <div class="form-group">
+            <input type="file" name="photo" class="compose-file" />
+        </div>
+        <button class="button publish" type="submit" name="publish">Publish</button>
+    </form>
+    <br>
+</div>
+<script src="https://cdn.ckeditor.com/4.11.1/standard/ckeditor.js"></script>
+<%- include("../partials/footer") -%>

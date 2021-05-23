@@ -1,0 +1,138 @@
+<%- include("../partials/header", {isAuthenticated}) -%>
+<div id="fb-root"></div>
+<div class="container-fluid">
+    <%- include("../partials/shareDialog", {id: id}) -%>
+    <div class="row align-items-start">
+        <div class="col-lg-6 card mx-2 mx-lg-auto p-0">
+            <div class="card-header p-1 text-center">
+                <h1 class="my-0 heading-bold"> <%= title %> </h1>
+                <% if (category) { %>
+                    <div class="badge badge-pill badge-danger py-1 px-2">
+                        <%= category %> 
+                    </div>
+                <% } %>
+            </div>
+            <div class="card-content p-2">
+                <!-- If there is an image attached with the post then only render the image -->
+                <% if(photo){ %>
+                    <img src="..\<%- photo %>" alt="Image attached with the post" class="img-fluid pb-2" id="blog-image">
+                <% } %>
+                <%- content %>
+                <!-- If this user is the author then only render the delete button-->
+                <% if(isAuthor){ %>
+                    <div class="d-block d-md-flex">
+                        <button onclick="window.location.href='/posts/<%=id%>/edit'" type="submit" class="button btn-sm edit my-1">Edit </button>
+                        <form  action="/posts/<%=id%>/delete" method="post" >
+                            <button class="button btn-sm  del my-1" type="submit">Delete</button>
+                        </form>
+                    </div>
+                <% } %>
+            </div>
+            <div class="card-footer text-center">
+                <p class="post-date-font">Posted on <%= moment(new Date(timestamps)).format("dddd, MMMM Do YYYY, h:mm:ss a") %> </p>
+                <a class="author-name" href="/author/<%= author._id %> " class="p-2 mb-4">
+                    <i class="fas fa-user"></i>
+                    <%= author.userName %> 
+                </a>
+            </div>
+        </div>
+        <div class="col-lg-4 mx-1 mx-md-auto">
+            <!-- number of comments -->
+            <div class="d-flex justify-content-start mb-3">
+                <div class="mr-5 lead"><span class="badge rounded-pill bg-danger"> <%= comments.length %> <% if(comments.length>1 || comments.length===0) { %> comments <% } else  {%> comment <% } %></span></div>
+                <div class="lead"><span class="badge rounded-pill bg-danger"><%= likesCount %> <% if(likesCount>1 || likesCount===0) { %> likes <% } else  {%> like <% } %></span></div>
+            </div>
+            <!-- like button -->
+            <div class="like-btn">
+              <div class="content">
+                <span class="like_icon"></span>
+                <% if(!isLiked){ %>
+                    <form action="/posts/<%=id%>/like?_method=PUT" method="POST">
+                        <button class="button likebtn" type="submit"> Like</button>
+                    </form>
+                <% }else{ %>
+                    <form action="/posts/<%=id%>/dislike?_method=PUT" method="POST">
+                        <button class="button likebtn" type="submit">Liked</button>
+                    </form>
+                <% } %> 
+                <button class="mt-3 button share-button">
+                    Share
+                </button>
+                <div class="mt-3 lead"><span class="badge views-badge"><%=noOfViews%> views</span></div>
+              </div>
+            </div>
+            
+            <!-- display all comments section -->
+            <% for(var i=0; i<comments.length; i++) { %>
+                <div class="comment"> 
+                    <h5>
+                        <a href="/author/<%= comments[i].authorId  %> " class="mb-4">
+                            <i class="fas fa-user"></i>
+                            <strong><%= comments[i].name %></strong>
+                        </a>
+                        <form class="float-end" action="/posts/<%=id%>/comments/<%=i%>/flag" method="post">
+                            <% if(currentUser && comments[i].flags && comments[i].flags.includes(currentUser.userName)) { %>
+                                <button class="btn btn-flag" title="Flagged as Inappropriate" type="submit" disabled><i class="fas fa-flag"></i></button>    
+                            <% }else{ %>
+                                <button class="btn btn-flag" title="Flag as Inappropriate" type="submit"><i class="fas fa-flag"></i></button>
+                            <% } %>
+                        </form>
+                        <% if(isAuthenticated){ %>
+                            <!-- Trigger button for reply popup -->
+                            <button class="btn btn-danger float-end" title="Reply" type="button" data-bs-toggle="modal" data-bs-target="#commentModal"><i class="fas reply-icon"></i></button>
+                            <%- include("../partials/replyDialog", {name: comments[i].name, i:i, id:id}) -%>
+                        <% } %>
+                    </h5> 
+                    <p class="post-date-font"><%= moment(new Date(comments[i].timestamps*1000)).format("dddd, MMMM Do YYYY, h:mm:ss a") %></p>
+                    <hr/>
+                    <%- comments[i].content %>
+                    <% if(currentUser && comments[i].authorId.toString() === currentUser._id.toString()){ %>
+                        <form action="/posts/<%=id%>/comments/<%=i%>" method="post">
+                            <button class="button  del" type="submit">Delete</button>
+                        </form>
+                    <% } %>
+                    <% if(comments[i].replies.length > 0){ %>
+                        <button class="btn btn-primary mt-2 reply-toggle">Show Replies</button>
+                        <ul class="replies" id="reply-id-<%= i %>">
+                            <% comments[i].replies.forEach((reply) => { %>
+                                <div class="reply py-3 px-2 my-3">
+                                    <h5>
+                                        <a href="/author/<%= reply.authorId  %> " class="mb-4">
+                                            <i class="fas fa-user"></i>
+                                            <strong><%= reply.name %></strong>
+                                        </a>
+                                    </h5>
+                                    <hr/>
+                                    <p><%- reply.content %></p>
+                                </div>
+                            <% }) %>
+                        </ul>
+                    <% } %>
+                </div>
+            <% } %>
+
+            <!-- add comment section -->
+            <h3 class="normal-heading-font fweight-600">Add a comment</h3>
+            <form action="/posts/<%=id%>/comment" method="POST" class="mb-4">
+                <div class="form-group">
+                    <label>Content</label>
+                    <textarea name="content" ></textarea>
+                    <script>
+                        window.onload = function() {
+                        CKEDITOR.replace('content');
+                        };
+                    </script>
+                </div>
+                <button class="button commenting" type="submit" name="publish">Post comment</button>
+            </form>
+
+        </div>
+    </div>
+</div>
+<script src="https://cdn.ckeditor.com/4.11.1/standard/ckeditor.js"></script>
+<script type="text/javascript" src="/js/postScript.js"></script>
+<script type="text/javascript" src="/js/share.js"></script>
+<script type="text/javascript" src="/js/commentReply.js"></script>
+
+<%- include("../partials/footer") -%>
+

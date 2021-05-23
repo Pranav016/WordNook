@@ -1,0 +1,41 @@
+<%- include("../partials/header", {isAuthenticated}) -%>
+
+<div class="col-md-6  mx-md-auto my-2 content-body-font">
+    <h1 class="heading-centre heading-bold normal-heading-font">Contact Us</h1>
+    <p class="alert alert-success"> <%= contactContent %> </p> 
+    <br>
+
+    <% if(error) { %>
+        <div class="alert alert-danger" role="alert">
+            <%= error %>
+        </div>
+    <% } %>
+
+    <!-- contact form section -->
+    <div class="container-form">  
+
+    <form action="/contact" method="POST" class="mt-4 my-4" id='contact-form'>
+        <div class="form-group">
+            <div class="styled-input wide">
+              <label>Your Email:</label>
+              <input class="form-control col-12" type="email" name="email" placeholder="Your Email" autocomplete="off" value="<%= formData.email %>" required autofocus></input>
+           </div>
+        </div>
+        <div class="form-group">
+            <div class="styled-input wide">
+              <label>Subject:</label>
+              <input class="form-control col-12" type="text" name="subject" placeholder="Subject" autocomplete="off" value="<%= formData.name %>" required></input>
+           </div>
+        </div>
+        <div class="form-group">
+            <div class="styled-input wide">
+              <label>Message:</label>
+              <textarea class="form-control col-12" rows="6" name="message" placeholder="Your Message" value="<%= formData.message %>" required></textarea>
+            </div>
+        </div>
+        <button class="button test-button share-button send-btn" type="submit">Send</button>
+    </form>
+</div>
+</div>
+
+<%- include("../partials/footer") -%>

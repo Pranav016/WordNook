@@ -1,0 +1,34 @@
+<%- include("../partials/header", {isAuthenticated: false}) -%>
+
+    <div class="col-md-4 mx-2 mx-md-auto my-5">
+
+        <h1 class="text-center">Login</h1>
+        <!-- display error if any while submitting the form -->
+        <% if(error) { %>
+            <div class="alert alert-danger" role="alert">
+                <%= error %>
+            </div>
+        <% } %>
+            <!-- login form section -->
+            <div class="container-centre">
+                <form action="/log-in" method="POST">
+                    <div class="form-group">
+                        <label>Your Email</label>
+                        <input class="form-control col-md-12 col-sm-12 col-xs-12" type="email" name="email"
+                            autocomplete="off" value="<%= data.email %>" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input id="password" class="form-control col-md-12 col-sm-12 col-xs-12" type="password" name="password"
+                            autocomplete="off" value="<%= data.password %>" required>
+                        <span class="password-icon"><i class="fa fa-eye" id="eye" onclick="togglePassword()"></i></span>
+                    </div>
+                    <div class="text-center">
+                        New User? <a href="/sign-up">Sign Up</a>
+                    </div>
+                    <button class="btn btn-primary log-in-btn" type="submit" name="log-in">Log In</button>
+                </form>
+            </div>
+    </div>
+    <script type="text/javascript" src="/js/showHidePassword.js"></script>
+<%- include("../partials/footer") -%>
