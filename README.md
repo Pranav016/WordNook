@@ -1,6 +1,6 @@
 <div align="center">
   <h1>WordNook</h1>
-  <img src="assets/WordNook banner.png" />
+  <img src="assets/Wordnook banner.png" />
 </div>
 
 <hr>
