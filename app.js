@@ -59,7 +59,8 @@ app.listen(PORT, () => {
 
 // mails would be send every first day of a month
 // for checking you may change the first parameter to '*/15 * * * * *' so that emails are sent every 15 secs
-cron.schedule(' 0 0 1 * *', () => {
+// after checking successfully, please change it to '0 0 1 * *' so emails are sent every month
+cron.schedule('0 0 1 * *', () => {
 	sendNewsletter()
 		.then((result) => {
 			if (typeof result !== 'undefined')
