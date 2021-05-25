@@ -1353,6 +1353,12 @@ svg {
 	border-right: 3px solid var(--color-secondary);
 }
 
+div.scroll {
+	overflow-x: scroll;
+	overflow-y: hidden;
+	white-space: nowrap;
+}
+
 /* Comment reply section */
 
 .reply {
