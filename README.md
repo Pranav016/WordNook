@@ -17,7 +17,7 @@
 ## About-
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-23-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-24-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 
@@ -224,6 +224,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="https://github.com/aanchalrakheja"><img src="https://avatars.githubusercontent.com/u/68388581?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Aanchal Rakheja</b></sub></a><br /><a href="https://github.com/ALPHAVIO/WordNook/commits?author=aanchalrakheja" title="Code">💻</a> <a href="#design-aanchalrakheja" title="Design">🎨</a></td>
     <td align="center"><a href="https://www.linkedin.com/in/pranav-singh-00904b1bb/"><img src="https://avatars.githubusercontent.com/u/73700530?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Pranav Singh</b></sub></a><br /><a href="https://github.com/ALPHAVIO/WordNook/commits?author=theBeginner86" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/tanishq-arya"><img src="https://avatars.githubusercontent.com/u/77333275?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Tanishq Arya</b></sub></a><br /><a href="https://github.com/ALPHAVIO/WordNook/commits?author=tanishq-arya" title="Code">💻</a></td>
   </tr>
 </table>
 
