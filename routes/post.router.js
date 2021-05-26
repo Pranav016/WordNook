@@ -363,6 +363,26 @@ router.post('/posts/:postId/delete', auth, async (req, res) => {
 		});
 });
 
+// delete post image route
+router.delete('/posts/:postId/image', auth, async (req, res) => {
+	try {
+		const { user } = req;
+		if (!user) {
+			return res.status(401).redirect('/log-in');
+		}
+		const post = await Blog.findById(req.params.postId);
+		if (post.author.toString() !== user._id.toString()) {
+			return res.render('404', { isAuthenticated: !!req.user });
+		}
+
+		post.photo = '';
+		await post.save();
+		res.redirect(`/posts/${req.params.postId}`);
+	} catch (e) {
+		return res.render('404', { isAuthenticated: !!req.user });
+	}
+});
+
 router.post('/category', auth, async (req, res) => {
 	const { category } = req.body;
 	if (!category) {
