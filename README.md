@@ -17,7 +17,7 @@
 ## About-
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-21-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-22-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 
@@ -220,6 +220,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://ananya-negi.herokuapp.com/"><img src="https://avatars.githubusercontent.com/u/54092197?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ananya Negi</b></sub></a><br /><a href="https://github.com/ALPHAVIO/WordNook/commits?author=AnanyaNegi" title="Code">💻</a> <a href="https://github.com/ALPHAVIO/WordNook/commits?author=AnanyaNegi" title="Documentation">📖</a> <a href="#maintenance-AnanyaNegi" title="Maintenance">🚧</a></td>
     <td align="center"><a href="https://www.linkedin.com/in/rushankhan/"><img src="https://avatars.githubusercontent.com/u/56950471?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Rushan Khan</b></sub></a><br /><a href="https://github.com/ALPHAVIO/WordNook/commits?author=RushanKhan1" title="Code">💻</a> <a href="https://github.com/ALPHAVIO/WordNook/commits?author=RushanKhan1" title="Documentation">📖</a> <a href="#maintenance-RushanKhan1" title="Maintenance">🚧</a></td>
     <td align="center"><a href="https://github.com/Ayush0730"><img src="https://avatars.githubusercontent.com/u/68139755?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ayush Jain</b></sub></a><br /><a href="https://github.com/ALPHAVIO/WordNook/commits?author=Ayush0730" title="Code">💻</a> <a href="https://github.com/ALPHAVIO/WordNook/commits?author=Ayush0730" title="Documentation">📖</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/aanchalrakheja"><img src="https://avatars.githubusercontent.com/u/68388581?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Aanchal Rakheja</b></sub></a><br /><a href="https://github.com/ALPHAVIO/WordNook/commits?author=aanchalrakheja" title="Code">💻</a> <a href="#design-aanchalrakheja" title="Design">🎨</a></td>
   </tr>
 </table>
 

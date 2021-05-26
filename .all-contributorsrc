@@ -204,6 +204,16 @@
         "code",
         "doc"
       ]
+    },
+    {
+      "login": "aanchalrakheja",
+      "name": "Aanchal Rakheja",
+      "avatar_url": "https://avatars.githubusercontent.com/u/68388581?v=4",
+      "profile": "https://github.com/aanchalrakheja",
+      "contributions": [
+        "code",
+        "design"
+      ]
     }
   ],
   "contributorsPerLine": 7,
