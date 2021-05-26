@@ -16,7 +16,27 @@
                 <!-- If there is an image attached with the post then only render the image -->
                 <% if(photo){ %>
                     <img src="..\<%- photo %>" alt="Image attached with the post" class="img-fluid pb-2" id="blog-image">
+                    <% if(isAuthor){ %>
+                        <button type="button" class="btn btn-danger btn-sm float-end" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="far fa-trash-alt"></i></button>
+                    <% } %>
                 <% } %>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Are you sure you want to delete the image from the post?</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">NO</button>
+                                <form action="/posts/<%= id %>/image?_method=DELETE" method="POST">
+                                    <button type="submit" class="btn btn-primary">YES</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <%- content %>
                 <!-- If this user is the author then only render the delete button-->
                 <% if(isAuthor){ %>
