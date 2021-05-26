@@ -194,10 +194,20 @@
         "doc",
         "maintenance"
       ]
+    },
+    {
+      "login": "Ayush0730",
+      "name": "Ayush Jain",
+      "avatar_url": "https://avatars.githubusercontent.com/u/68139755?v=4",
+      "profile": "https://github.com/Ayush0730",
+      "contributions": [
+        "code",
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
-  "projectName": "BlogSite",
+  "projectName": "WordNook",
   "projectOwner": "ALPHAVIO",
   "repoType": "github",
   "repoHost": "https://github.com",
