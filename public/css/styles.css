@@ -517,6 +517,11 @@ input[name='perPage'] {
 	background: #129fb4;
 }
 
+.nav-toggle-button:hover {
+	box-shadow: 10px 5px 5px rgb(97, 93, 93);
+	opacity: 0.1;
+}
+
 .button:active,
 .button:focus {
 	background: var(--color-primary);
