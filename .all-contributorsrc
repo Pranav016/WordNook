@@ -232,6 +232,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "satcasm",
+      "name": "Satyam Singh",
+      "avatar_url": "https://avatars.githubusercontent.com/u/56315878?v=4",
+      "profile": "https://satyam-singh.netlify.app/",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
