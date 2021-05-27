@@ -4,6 +4,8 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const multer = require('multer');
 const methodOverride = require('method-override');
+const fetch = require('node-fetch');
+const { stringify } = require('querystring');
 const User = require('../models/User.model');
 const auth = require('../middlewares/auth');
 const {
@@ -141,6 +143,27 @@ router.post(
 			password,
 			confirmPassword,
 		} = req.body;
+		if (!req.body['g-recaptcha-response'])
+			return res.json({ success: false, msg: 'Please select captcha' });
+
+		// Secret key
+		const secretKey = '6LecnfAaAAAAAC2AOAYwA2xyHLbiuPqkdJHDHwYX';
+
+		// Verify URL
+		const query = stringify({
+			secret: secretKey,
+			response: req.body['g-recaptcha-response'],
+			remoteip: req.connection.remoteAddress
+		});
+
+		const verifyURL = `https://google.com/recaptcha/api/siteverify?${query}`;
+
+		// Make a request to verifyURL
+		const body = await fetch(verifyURL).then(res => res.json());
+		
+		// If not successful
+		if (body.success !== undefined && !body.success)
+			return res.json({ success: false, msg: 'Failed captcha verification' });
 
 		// Check if the username or email already taken
 		User.findOne(
