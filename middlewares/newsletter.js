@@ -56,7 +56,7 @@ const composeMessage = async () => {
 
 	const { firstName, lastName } = await User.findById(author);
 	// eslint-disable-next-line prettier/prettier
-	const authorBlog = `${firstName  } ${  lastName}`;
+	const authorBlog = `${firstName} ${lastName}`;
 	const timeOfPost = moment(new Date(timestamps)).format(
 		'dddd, MMMM Do YYYY, h:mm:ss a'
 	);
