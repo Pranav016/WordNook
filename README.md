@@ -20,7 +20,7 @@
 <!-- **DeepSource:** [![DeepSource](https://deepsource.io/gh/ALPHAVIO/WordNook.svg/?label=active+issues&show_trend=true)](https://deepsource.io/gh/ALPHAVIO/WordNook/?ref=repository-badge) -->
 	
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-26-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-27-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 [![Discord](https://img.shields.io/badge/Join_ALPHAVIO_Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/9SgPjvhqEj)
@@ -236,6 +236,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/tanishq-arya"><img src="https://avatars.githubusercontent.com/u/77333275?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Tanishq Arya</b></sub></a><br /><a href="https://github.com/ALPHAVIO/WordNook/commits?author=tanishq-arya" title="Code">💻</a></td>
     <td align="center"><a href="https://satyam-singh.netlify.app/"><img src="https://avatars.githubusercontent.com/u/56315878?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Satyam Singh</b></sub></a><br /><a href="https://github.com/ALPHAVIO/WordNook/commits?author=satcasm" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/tend2infinity"><img src="https://avatars.githubusercontent.com/u/61948033?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Soumya Singh</b></sub></a><br /><a href="https://github.com/ALPHAVIO/WordNook/commits?author=tend2infinity" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/osamamagdy"><img src="https://avatars.githubusercontent.com/u/59124937?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Osama Magdy</b></sub></a><br /><a href="https://github.com/ALPHAVIO/WordNook/commits?author=osamamagdy" title="Code">💻</a></td>
   </tr>
 </table>
 
