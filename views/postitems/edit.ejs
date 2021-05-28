@@ -1,6 +1,7 @@
 <%- include("../partials/header", {isAuthenticated}) -%>
     <div class="container-centre mt-5">
-        <form action="/posts/<%=blog._id%>?_method=PUT" method="POST">
+        <h1 class="heading-centre heading-bold normal-heading-font">Edit Blog</h1>
+        <form action="/posts/<%=blog._id%>?_method=PUT" method="POST" enctype="multipart/form-data">
             <div class="form-group">
                 <label>Title</label>
                 <input class="form-control col-md-12 col-sm-12 col-xs-12" type="text" name="post[blogTitle]" value="<%= blog.blogTitle %>" autocomplete="off" required></input>
@@ -59,6 +60,10 @@
                        CKEDITOR.replace('post[blogContent]');
                     };
                 </script>
+            </div>
+            <div class="form-group">
+                <label>Edit Image (To update image in the post)</label>
+                <input class="col-md-12 col-sm-12 col-xs-12" type="file" name="photo"></input>
             </div>
             <button class="button publish" type="submit" name="publish">Publish</button>
         </form>
