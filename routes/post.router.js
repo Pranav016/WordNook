@@ -1,5 +1,6 @@
 // requiring dependencies, models and middlewares
 const express = require('express');
+const multer = require('multer');
 // eslint-disable-next-line
 const _ = require('lodash');
 const methodOverride = require('method-override');
@@ -8,6 +9,36 @@ const auth = require('../middlewares/auth');
 const Blog = require('../models/Blog.model');
 const UserModel = require('../models/User.model');
 const Comment = require('../models/Comment.model');
+
+// multer setup
+const storage = multer.diskStorage({
+	destination: function (req, file, cb) {
+		cb(null, './uploads/');
+	},
+	filename: function (req, file, cb) {
+		cb(
+			null,
+			new Date().toISOString().replace(/:/g, '-') + file.originalname
+		);
+	},
+});
+
+const fileFilter = (req, file, cb) => {
+	// reject a file
+	if (file.mimetype === 'image/jpeg' || file.mimetype === 'image/png') {
+		cb(null, true);
+	} else {
+		cb(null, false);
+	}
+};
+
+const upload = multer({
+	storage: storage,
+	limits: {
+		fileSize: 1024 * 1024 * 5,
+	},
+	fileFilter: fileFilter,
+});
 
 const router = express.Router();
 router.use(methodOverride('_method'));
@@ -413,12 +444,15 @@ router.get('/posts/:id/edit', auth, async (req, res) => {
 	});
 });
 
-router.put('/posts/:postId', auth, async (req, res) => {
+router.put('/posts/:postId', auth, upload.single('photo'), async (req, res) => {
 	if (!req.user) return res.redirect('/log-in');
 
 	try {
 		const blog = await Blog.findById({ _id: req.params.postId });
 		const { blogTitle, status, category, blogContent } = req.body.post;
+		if (req.file) {
+			blog.photo = req.file.path;
+		}
 		blog.blogTitle = blogTitle;
 		blog.status = status;
 		blog.category = category;
