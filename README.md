@@ -23,6 +23,8 @@
 [![All Contributors](https://img.shields.io/badge/all_contributors-26-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
+[![Discord](https://img.shields.io/badge/Join_ALPHAVIO_Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/9SgPjvhqEj)
+	
 - 'Blog' and 'blogging' are now loosely used for content creation and sharing on social media, especially when the content is long-form and one creates and shares content on regular basis.  
 
 [![Edit with Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/ALPHAVIO/WordNook)
