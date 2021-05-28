@@ -44,6 +44,9 @@ app.use(require('./routes/post.router'));
 // router for testimonials
 app.use(require('./routes/testimonial.router'));
 
+// router for newsletter
+app.use(require('./routes/newsletter.router'));
+
 // routing to 404 in case of unavilable urls.
 app.use('*', (req, res) => {
 	res.render('404', {
