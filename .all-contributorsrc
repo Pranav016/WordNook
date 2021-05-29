@@ -143,7 +143,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/67833077?v=4",
       "profile": "https://github.com/Ankita297",
       "contributions": [
-        "code"
+        "code",
+        "doc"
       ]
     },
     {
@@ -194,10 +195,75 @@
         "doc",
         "maintenance"
       ]
+    },
+    {
+      "login": "Ayush0730",
+      "name": "Ayush Jain",
+      "avatar_url": "https://avatars.githubusercontent.com/u/68139755?v=4",
+      "profile": "https://github.com/Ayush0730",
+      "contributions": [
+        "code",
+        "doc"
+      ]
+    },
+    {
+      "login": "aanchalrakheja",
+      "name": "Aanchal Rakheja",
+      "avatar_url": "https://avatars.githubusercontent.com/u/68388581?v=4",
+      "profile": "https://github.com/aanchalrakheja",
+      "contributions": [
+        "code",
+        "design"
+      ]
+    },
+    {
+      "login": "theBeginner86",
+      "name": "Pranav Singh",
+      "avatar_url": "https://avatars.githubusercontent.com/u/73700530?v=4",
+      "profile": "https://www.linkedin.com/in/pranav-singh-00904b1bb/",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "tanishq-arya",
+      "name": "Tanishq Arya",
+      "avatar_url": "https://avatars.githubusercontent.com/u/77333275?v=4",
+      "profile": "https://github.com/tanishq-arya",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "satcasm",
+      "name": "Satyam Singh",
+      "avatar_url": "https://avatars.githubusercontent.com/u/56315878?v=4",
+      "profile": "https://satyam-singh.netlify.app/",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "tend2infinity",
+      "name": "Soumya Singh",
+      "avatar_url": "https://avatars.githubusercontent.com/u/61948033?v=4",
+      "profile": "https://github.com/tend2infinity",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "osamamagdy",
+      "name": "Osama Magdy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/59124937?v=4",
+      "profile": "https://github.com/osamamagdy",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
-  "projectName": "BlogSite",
+  "projectName": "WordNook",
   "projectOwner": "ALPHAVIO",
   "repoType": "github",
   "repoHost": "https://github.com",
