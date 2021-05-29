@@ -519,7 +519,7 @@ input[name='perPage'] {
 
 .nav-toggle-button:hover {
 	box-shadow: 10px 5px 5px rgb(97, 93, 93);
-	opacity: 0.1;
+	opacity: 0.8;
 }
 
 .button:active,
