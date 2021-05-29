@@ -7,7 +7,7 @@
   
 <div align="center">
  <h1>A sneak peek into what we have here</h1>
- <img src="assets/word-nook.gif" align = "center"  width=600px/>
+ <img src="assets/wordnook.gif" align = "center"  width=600px/>
 </div>
 
 <hr>
