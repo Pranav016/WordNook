@@ -52,9 +52,8 @@ body {
 	height: 90vh;
 	z-index: 1;
 	overflow: visible;
-	background: var(--color-primary)
-		url('/images/load.gif')
-		no-repeat center center;
+	background: var(--color-primary) url('/images/load.gif') no-repeat center
+		center;
 }
 
 .container-fluid {
