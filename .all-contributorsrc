@@ -260,6 +260,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "ritmojs",
+      "name": "Rhythm Verma",
+      "avatar_url": "https://avatars.githubusercontent.com/u/51092166?v=4",
+      "profile": "http://drhythm.tech",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
