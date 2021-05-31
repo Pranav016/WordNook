@@ -66,7 +66,7 @@ body {
 	width: 100%;
 	height: 100vh;
 	background-size: cover;
-	background-color: #e5e7eb;
+	background: var(--color-text);
 	display: grid;
 	place-items: center;
 	position: fixed;
@@ -408,7 +408,6 @@ a::after {
 .darkmode--activated #nav-id {
 	background-color: var(--color-text) !important;
 }
-
 .orderForms {
 	align-items: center;
 	justify-content: space-between;
