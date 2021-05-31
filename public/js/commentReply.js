@@ -11,6 +11,7 @@ for (let i = 0; i < replyToggleBtns.length; i++) {
 		}
 	});
 }
+
 function showReplies(i) {
 	const replyDialog = document.getElementById(`reply-id-${i}`);
 	replyDialog.classList.add('show');
