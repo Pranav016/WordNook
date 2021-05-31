@@ -348,7 +348,7 @@ a::after {
 }
 
 .comment {
-	border: 0.13rem solid rgb(223, 220, 220);
+	border: 0.13rem solid var(--color-secondary);
 	border-radius: 0.4rem;
 	padding: 1.3rem;
 	margin-bottom: 1.3rem;
@@ -1394,7 +1394,7 @@ div.scroll {
 /* Comment reply section */
 
 .reply {
-	border: 0.13rem solid rgb(223, 220, 220);
+	border: 0.13rem solid var(--color-secondary);
 	border-radius: 0.4rem;
 	padding: 1.3rem;
 	margin-bottom: 1.3rem;
