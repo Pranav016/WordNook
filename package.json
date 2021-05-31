@@ -48,7 +48,6 @@
 			"npm run lint-check"
 		]
 	},
-	
 	"devDependencies": {
 		"eslint": "^7.27.0",
 		"eslint-config-airbnb-base": "^14.2.1",
