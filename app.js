@@ -4,6 +4,9 @@ const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
+const cron = require('node-cron');
+
+const sendNewsletter = require('./middlewares/newsletter');
 
 const PORT = process.env.PORT || 3000;
 const connectDB = require('./config/db');
@@ -41,6 +44,9 @@ app.use(require('./routes/post.router'));
 // router for testimonials
 app.use(require('./routes/testimonial.router'));
 
+// router for newsletter
+app.use(require('./routes/newsletter.router'));
+
 // routing to 404 in case of unavilable urls.
 app.use('*', (req, res) => {
 	res.render('404', {
@@ -52,4 +58,16 @@ app.use('*', (req, res) => {
 app.listen(PORT, () => {
 	// eslint-disable-next-line no-console
 	console.log(`Server started on port: ${PORT}`);
+});
+
+// mails would be send every first day of a month
+// for checking you may change the first parameter to '*/15 * * * * *' so that emails are sent every 15 secs
+// after checking successfully, please change it to '0 0 1 * *' so emails are sent every month
+cron.schedule('0 0 1 * *', () => {
+	sendNewsletter()
+		.then((result) => {
+			if (typeof result !== 'undefined')
+				console.log('Email sent....', result);
+		})
+		.catch((error) => console.log('Error....', error));
 });

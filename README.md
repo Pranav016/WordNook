@@ -7,7 +7,7 @@
   
 <div align="center">
  <h1>A sneak peek into what we have here</h1>
- <img src="assets/word-nook.gif" align = "center"  width=600px/>
+ <img src="assets/wordnook.gif" align = "center"  width=600px/>
 </div>
 
 <hr>
@@ -16,11 +16,15 @@
 
 ## About-
 
+![Forks](https://img.shields.io/github/forks/ALPHAVIO/WordNook?style=social) ![Stars](https://img.shields.io/github/stars/ALPHAVIO/WordNook?style=social) [![GitHub issues](https://img.shields.io/github/issues/ALPHAVIO/WordNook?color=green&logo=github&style=flat)](https://github.com/ALPHAVIO/WordNook/issues) [![GitHub PRs](https://img.shields.io/github/issues-pr/ALPHAVIO/WordNook?style=flat&logo=github)](https://github.com/ALPHAVIO/WordNook/pulls) ![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=ALPHAVIO/WordNook)  
+<!-- **DeepSource:** [![DeepSource](https://deepsource.io/gh/ALPHAVIO/WordNook.svg/?label=active+issues&show_trend=true)](https://deepsource.io/gh/ALPHAVIO/WordNook/?ref=repository-badge) -->
+	
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-26-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-28-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-
+[![Discord](https://img.shields.io/badge/Join_ALPHAVIO_Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/9SgPjvhqEj)
+	
 - 'Blog' and 'blogging' are now loosely used for content creation and sharing on social media, especially when the content is long-form and one creates and shares content on regular basis.  
 
 [![Edit with Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/ALPHAVIO/WordNook)
@@ -28,13 +32,18 @@
 - This is a dynamically updating Blog posting website developed primarily using Node Js with EJS template engine and Mongoose as ODM(Object Data Modeling library).  
 [Visit website](https://word-nook.herokuapp.com/)
 
+</div>
+
 <hr>
 
-## Tech Stack-
+## Technology Stack 🛠️
 
-<img alt="HTML5" src="https://img.shields.io/badge/html5%20-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white"/> <img alt="CSS3" src="https://img.shields.io/badge/css3%20-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white"/> <img alt="EJS template engine" src="https://img.shields.io/badge/EJS template engine%20-%23039BE5.svg?&style=for-the-badge&logo=EJStemplateengine"/> <img alt="NodeJS" src="https://img.shields.io/badge/node.js%20-%2343853D.svg?&style=for-the-badge&logo=node.js&logoColor=white"/> <img alt="Express.js" src="https://img.shields.io/badge/express.js%20-%23404d59.svg?&style=for-the-badge"/> <img alt="Mongoose" src ="https://img.shields.io/badge/Mongoose-%234ea94b.svg?&style=for-the-badge&logo=Mongoose&logoColor=white"/> <img alt="MongoDB" src ="https://img.shields.io/badge/MongoDB-%234ea94b.svg?&style=for-the-badge&logo=mongodb&logoColor=white"/>
+- **Coding Languages**: <img alt="JavaScript" src="https://img.shields.io/badge/javascript%20-%23323330.svg?&style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"/> <img alt="HTML5" src="https://img.shields.io/badge/html5%20-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white"/> <img alt="CSS3" src="https://img.shields.io/badge/css3%20-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white"/>
 
-</div>
+- **Tools & Frameworks**: <img alt="NodeJS" src="https://img.shields.io/badge/node.js%20-%2343853D.svg?&style=for-the-badge&logo=node.js&logoColor=white"/> <img alt="Express.js" src="https://img.shields.io/badge/express.js%20-%23404d59.svg?&style=for-the-badge"/> <img alt="MongoDB" src ="https://img.shields.io/badge/MongoDB-%234ea94b.svg?&style=for-the-badge&logo=mongodb&logoColor=white"/> <img alt="Mongoose" src ="https://img.shields.io/badge/Mongoose-%234ea94b.svg?&style=for-the-badge&logo=Mongoose&logoColor=white"/> <img alt="EJS template engine" src="https://img.shields.io/badge/EJS template engine%20-%23039BE5.svg?&style=for-the-badge&logo=EJStemplateengine"/>
+
+- **Project Management Tools**: <img alt="GitHub" src="https://img.shields.io/badge/github%20-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white"/> <img alt="Git" src="https://img.shields.io/badge/git%20-%23F05033.svg?&style=for-the-badge&logo=git&logoColor=white"/>
+
 
 <hr>
 
@@ -227,6 +236,8 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/tanishq-arya"><img src="https://avatars.githubusercontent.com/u/77333275?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Tanishq Arya</b></sub></a><br /><a href="https://github.com/ALPHAVIO/WordNook/commits?author=tanishq-arya" title="Code">💻</a></td>
     <td align="center"><a href="https://satyam-singh.netlify.app/"><img src="https://avatars.githubusercontent.com/u/56315878?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Satyam Singh</b></sub></a><br /><a href="https://github.com/ALPHAVIO/WordNook/commits?author=satcasm" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/tend2infinity"><img src="https://avatars.githubusercontent.com/u/61948033?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Soumya Singh</b></sub></a><br /><a href="https://github.com/ALPHAVIO/WordNook/commits?author=tend2infinity" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/osamamagdy"><img src="https://avatars.githubusercontent.com/u/59124937?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Osama Magdy</b></sub></a><br /><a href="https://github.com/ALPHAVIO/WordNook/commits?author=osamamagdy" title="Code">💻</a></td>
+    <td align="center"><a href="http://drhythm.tech"><img src="https://avatars.githubusercontent.com/u/51092166?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Rhythm Verma</b></sub></a><br /><a href="https://github.com/ALPHAVIO/WordNook/commits?author=ritmojs" title="Code">💻</a></td>
   </tr>
 </table>
 

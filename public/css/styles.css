@@ -35,7 +35,7 @@ body {
 	opacity: 1;
 	display: flex;
 	flex-direction: column;
-	background-image: url('../images/bg4.jpg');
+	background-image: url('../images/background.png');
 	background-size: cover;
 	color: var(--color-primary);
 	scroll-behavior: smooth;
@@ -52,9 +52,8 @@ body {
 	height: 90vh;
 	z-index: 1;
 	overflow: visible;
-	background: var(--color-primary)
-		url('https://i.pinimg.com/originals/34/cc/62/34cc62d1df1c8328f56ae7a7acf2e83a.gif')
-		no-repeat center center;
+	background: var(--color-primary) url('/images/load.gif') no-repeat center
+		center;
 }
 
 .container-fluid {
@@ -325,6 +324,7 @@ a::after {
 .reply-icon::before {
 	content: '\f3e5';
 }
+
 /* ------------------------------------------------------------ */
 /* Input boxes and placeholder text styles */
 
@@ -1292,10 +1292,10 @@ svg {
 	box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.11);
 }
 
-/* read-profile form form styling  */
+/* read-profile and edit blog form styling  */
 
 .edit-form {
-	padding: 5% 0;
+	padding: 5% 3%;
 	border-radius: 2rem;
 	background-color: #f2f6f8;
 	box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
@@ -1303,13 +1303,8 @@ svg {
 		rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
-.profile-file,
-.profile-firstname,
-.profile-lastname,
-.profile-username,
-.profile-email,
-.profile-password,
-.profile-photo {
+.edit-form label,
+input[type='file'] {
 	font-weight: bold;
 	font-size: larger;
 }
