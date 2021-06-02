@@ -147,19 +147,19 @@ router.post(
 			return res.json({ success: false, msg: 'Please select captcha' });
 
 		// Secret key
-		const secretKey = '6LecnfAaAAAAAC2AOAYwA2xyHLbiuPqkdJHDHwYX';
+		const secretKey = process.env.SECRET_KEY_CAPTCHA;
 
 		// Verify URL
 		const query = stringify({
 			secret: secretKey,
 			response: req.body['g-recaptcha-response'],
-			remoteip: req.connection.remoteAddress
+			remoteip: req.connection.remoteAddress,
 		});
 
 		const verifyURL = `https://google.com/recaptcha/api/siteverify?${query}`;
 
 		// Make a request to verifyURL
-		const body = await fetch(verifyURL).then(res => res.json());
+		const body = await fetch(verifyURL).then((res) => res.json());
 		
 		// If not successful
 		if (body.success !== undefined && !body.success)
