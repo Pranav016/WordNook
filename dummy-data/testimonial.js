@@ -2,12 +2,12 @@ const testimonial = [
 	{
 		views:
 			'This is a very good website .You are free to share your thoughts . Give words to your thoughts',
-		author: 'John Benson',
+		author: 'John Fox',
 	},
 	{
 		views:
 			'This Platform is great source of motivation , it will motivate you to do something on your own then share it us .',
-		author: 'Riya chokri',
+		author: 'Riya Mehra',
 	},
 	{
 		views: 'It is great Platform to share your experience to help others .',
@@ -20,7 +20,7 @@ const testimonial = [
 	},
 	{
 		views: 'You can maintain your Daily Journal and it will be secure .',
-		author: 'Sima Goaur',
+		author: 'Sima Gaur',
 	},
 	{
 		views:
