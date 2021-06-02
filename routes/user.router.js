@@ -160,10 +160,13 @@ router.post(
 
 		// Make a request to verifyURL
 		const body = await fetch(verifyURL).then((res) => res.json());
-		
+
 		// If not successful
 		if (body.success !== undefined && !body.success)
-			return res.json({ success: false, msg: 'Failed captcha verification' });
+			return res.json({
+				success: false,
+				msg: 'Failed captcha verification',
+			});
 
 		// Check if the username or email already taken
 		User.findOne(
