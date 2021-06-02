@@ -122,7 +122,7 @@ router.post(
 			// eslint-disable-next-line
 			updates.forEach((update) => (user[update] = req.body[update]));
 			await user.save();
-			res.redirect('/');
+			res.redirect('/dashboard');
 		} catch (e) {
 			res.status(500).send(e);
 		}
