@@ -12,47 +12,47 @@
                 <% } %>
                 <form class="form-horizontal edit-form" role="form" method='post' action="/read-profile" enctype="multipart/form-data">
                     <div class="form-group">
-                        <label class="col-lg-3 control-label profile-firstname" for="firstName" >First name:</label>
+                        <label class="col-lg-3" for="firstName" >First name:</label>
                         <div class="col-12">
                             <input class="form-control" type="text" for="firstName" name="firstName" value="<%= user.firstName %>">
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="col-lg-3 control-label profile-lastname" for="lastName" >Last name:</label>
+                        <label class="col-lg-3" for="lastName" >Last name:</label>
                         <div class="col-12">
                             <input class="form-control" type="text" for="lastName" name="lastName" value="<%= user.lastName %>">
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="col-lg-3 control-label profile-username" for="userName" >User name:</label>
+                        <label class="col-lg-3" for="userName" >User name:</label>
                         <div class="col-12">
                             <input class="form-control" type="text" for="userName" name="userName" value="<%= user.userName %>">
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="col-12 control-label profile-email" for="email">Email:</label>
+                        <label class="col-12" for="email">Email:</label>
                         <div class="col-12">
                             <input class="form-control" type="text" for="email" name="email" value="<%= user.email %>">
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="col-12 control-label profile-file" for="photo" >Profile Picture(Leave empty if you don't want to update profile picture)</label>
+                        <label class="col-12" for="photo" >Profile Picture(Leave empty if you don't want to update profile picture)</label>
                         <div class="col-12">
-                            <input type="file" name="photo" class="profile-photo">
+                            <input type="file" name="photo">
                         </div>
                     </div>
                     <p class="password-info">
                         Please enter the old password to confirm changes <br>or new password to change the password.
                     </p>
                     <div class="form-group">
-                        <label class="col-md-3 control-label profile-password" for="password" >Password:</label>
+                        <label class="col-md-3" for="password" >Password:</label>
                         <div class="col-12">
                             <input class="form-control" type="password" name="password" id="password">
                             <span class="password-icon pb-3 pr-3"><i class="fa fa-eye" id="eye" onclick="togglePassword()"></i></span>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="col-md-3 control-label"></label>
+                        <label class="col-md-3></label>
                         <div class="col-12 edit-btn">
                             <input type="submit" class="btnFrame button px-4 mb-2" value="Save Changes">
                             <span></span>

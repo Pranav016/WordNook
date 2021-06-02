@@ -35,7 +35,7 @@ body {
 	opacity: 1;
 	display: flex;
 	flex-direction: column;
-	background-image: url('../images/bg4.jpg');
+	background-image: url('../images/background.png');
 	background-size: cover;
 	color: var(--color-primary);
 	scroll-behavior: smooth;
@@ -46,15 +46,48 @@ body {
 		1px 1px 0px #fff;
 }
 
-#loader {
-	position: fixed;
+.loading-wrap {
+	width: 15em;
+	height: 15em;
+	padding: 8px;
+	border-radius: 50%;
+	background: linear-gradient(
+		to right,
+		var(--color-primary),
+		var(--color-secondary)
+	);
+	animation: spin 1s linear infinite;
+}
+.loading-hole {
 	width: 100%;
-	height: 90vh;
-	z-index: 1;
+	height: 100%;
+	border-radius: 50%;
+	background-color: white;
+}
+#preloader {
+	margin: 0%;
+	padding: 0%;
+	width: 100%;
+	height: 100vh;
+	background-size: cover;
+	background: var(--color-text);
+	display: grid;
+	place-items: center;
+	position: fixed;
+	z-index: 9999;
 	overflow: visible;
-	background: var(--color-primary)
-		url('https://i.pinimg.com/originals/34/cc/62/34cc62d1df1c8328f56ae7a7acf2e83a.gif')
-		no-repeat center center;
+}
+@keyframes spin {
+	to {
+		transform: rotate(360deg);
+	}
+}
+.heading_4 {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: black !important;
 }
 
 .container-fluid {
@@ -280,6 +313,10 @@ a::after {
 }
 
 .post-preview {
+	border: 2px solid var(--color-secondary);
+	box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+		rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+		rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 	background-color: rgba(229, 231, 235, 0.5);
 	/* margin: 0.8rem; */
 	padding: 1.9rem;
@@ -311,7 +348,7 @@ a::after {
 }
 
 .comment {
-	border: 0.13rem solid rgb(223, 220, 220);
+	border: 0.13rem solid var(--color-secondary);
 	border-radius: 0.4rem;
 	padding: 1.3rem;
 	margin-bottom: 1.3rem;
@@ -325,6 +362,7 @@ a::after {
 .reply-icon::before {
 	content: '\f3e5';
 }
+
 /* ------------------------------------------------------------ */
 /* Input boxes and placeholder text styles */
 
@@ -378,7 +416,6 @@ a::after {
 .darkmode--activated #nav-id {
 	background-color: var(--color-text) !important;
 }
-
 .orderForms {
 	align-items: center;
 	justify-content: space-between;
@@ -515,6 +552,11 @@ input[name='perPage'] {
 
 .button:hover {
 	background: #129fb4;
+}
+
+.nav-toggle-button:hover {
+	box-shadow: 10px 5px 5px rgb(97, 93, 93);
+	opacity: 0.8;
 }
 
 .button:active,
@@ -1287,10 +1329,10 @@ svg {
 	box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.11);
 }
 
-/* read-profile form form styling  */
+/* read-profile and edit blog form styling  */
 
 .edit-form {
-	padding: 5% 0;
+	padding: 5% 3%;
 	border-radius: 2rem;
 	background-color: #f2f6f8;
 	box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
@@ -1298,13 +1340,8 @@ svg {
 		rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
-.profile-file,
-.profile-firstname,
-.profile-lastname,
-.profile-username,
-.profile-email,
-.profile-password,
-.profile-photo {
+.edit-form label,
+input[type='file'] {
 	font-weight: bold;
 	font-size: larger;
 }
@@ -1362,7 +1399,7 @@ div.scroll {
 /* Comment reply section */
 
 .reply {
-	border: 0.13rem solid rgb(223, 220, 220);
+	border: 0.13rem solid var(--color-secondary);
 	border-radius: 0.4rem;
 	padding: 1.3rem;
 	margin-bottom: 1.3rem;
