@@ -554,8 +554,8 @@ input[name='perPage'] {
 	background: #129fb4;
 }
 
-.nav-toggle-button:hover {
-	box-shadow: 10px 5px 5px rgb(97, 93, 93);
+.nav-toggle-button {
+	box-shadow: 3px 3px 3px 3px rgb(97, 93, 93);
 	opacity: 0.8;
 }
 

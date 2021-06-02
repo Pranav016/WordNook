@@ -7,7 +7,10 @@
   
 <div align="center">
  <h1>A sneak peek into what we have here</h1>
- <img src="assets/wordnook.gif" align = "center"  width=600px/>
+ 
+![wordnook](https://user-images.githubusercontent.com/54665036/120497609-2e2f3800-c3dc-11eb-96a5-e72dfab93013.gif)
+
+
 </div>
 
 <hr>
@@ -142,7 +145,8 @@ show collections
 <hr>
 
 ### Note -
-1. **You must lint your code before making any Pull Request** 
+
+<!-- 1. **You must lint your code before making any Pull Request** 
 	- To check for any linting errors, run command:
 	```
 	npm run lint-check
@@ -151,7 +155,7 @@ show collections
 	```
 	npm run lint
 	```
-	**Check again for any errors that need to be resolved manually and if the application works fine after you lint the code.**  
+	**Check again for any errors that need to be resolved manually and if the application works fine after you lint the code.**   -->
 
 1. If your git shows an issue with your `package-lock.json` while installing dependencies or throws error that **lockfile version-2** is not compatible with your system
 	Then check your npm version by running command
@@ -165,7 +169,7 @@ show collections
 ### Disclaimer-
 The `Contact Us` feature might not work in the local environment since the API-Key has not been shared. If you still want to work on it, generate your own API key from [Mail Gun](https://www.mailgun.com/) and include it in the `.env` file as 
 ```
-API-KEY = <your-api-key>
+MAILGUN_API_KEY = <your-api-key>
 ```  
 
 <hr>
