@@ -7,7 +7,7 @@ dotenv.config();
 // api and domain provided by mailgun
 const auth = {
 	auth: {
-		api_key: process.env.API_KEY,
+		api_key: process.env.MAILGUN_API_KEY,
 		domain: 'sandboxc6297caa1a6a472b8723fdfd8d2b4782.mailgun.org',
 	},
 };

@@ -143,8 +143,19 @@ router.post(
 			password,
 			confirmPassword,
 		} = req.body;
-		if (!req.body['g-recaptcha-response'])
-			return res.json({ success: false, msg: 'Please select captcha' });
+		if (!req.body['g-recaptcha-response']) {
+			return res.status(401).render('./auth/signUp', {
+				error: 'Please select captcha.',
+				data: {
+					firstName,
+					lastName,
+					userName,
+					password,
+					email,
+					confirmPassword,
+				},
+			});
+		}
 
 		// Secret key
 		const secretKey = process.env.SECRET_KEY_CAPTCHA;
@@ -162,11 +173,23 @@ router.post(
 		const body = await fetch(verifyURL).then((res) => res.json());
 
 		// If not successful
-		if (body.success !== undefined && !body.success)
-			return res.json({
-				success: false,
-				msg: 'Failed captcha verification',
+		if (body.success !== undefined && !body.success) {
+			return res.status(401).render('./auth/signUp', {
+				error: 'Failed captcha verification',
+				data: {
+					firstName,
+					lastName,
+					userName,
+					password,
+					email,
+					confirmPassword,
+				},
 			});
+		}
+		// return res.json({
+		// 	success: false,
+		// 	msg: 'Failed captcha verification',
+		// });
 
 		// Check if the username or email already taken
 		User.findOne(
