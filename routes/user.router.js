@@ -157,34 +157,36 @@ router.post(
 			});
 		}
 
-		// Secret key
-		const secretKey = process.env.SECRET_KEY_CAPTCHA;
+		if (req.rawHeaders[1] !== 'localhost:3000') {
+			// Secret key
+			const secretKey = process.env.SECRET_KEY_CAPTCHA;
 
-		// Verify URL
-		const query = stringify({
-			secret: secretKey,
-			response: req.body['g-recaptcha-response'],
-			remoteip: req.connection.remoteAddress,
-		});
-
-		const verifyURL = `https://google.com/recaptcha/api/siteverify?${query}`;
-
-		// Make a request to verifyURL
-		const body = await fetch(verifyURL).then((res) => res.json());
-
-		// If not successful
-		if (body.success !== undefined && !body.success) {
-			return res.status(401).render('./auth/signUp', {
-				error: 'Failed captcha verification',
-				data: {
-					firstName,
-					lastName,
-					userName,
-					password,
-					email,
-					confirmPassword,
-				},
+			// Verify URL
+			const query = stringify({
+				secret: secretKey,
+				response: req.body['g-recaptcha-response'],
+				remoteip: req.connection.remoteAddress,
 			});
+
+			const verifyURL = `https://google.com/recaptcha/api/siteverify?${query}`;
+
+			// Make a request to verifyURL
+			const body = await fetch(verifyURL).then((res) => res.json());
+
+			// If not successful
+			if (body.success !== undefined && !body.success) {
+				return res.status(401).render('./auth/signUp', {
+					error: 'Failed captcha verification',
+					data: {
+						firstName,
+						lastName,
+						userName,
+						password,
+						email,
+						confirmPassword,
+					},
+				});
+			}
 		}
 		// return res.json({
 		// 	success: false,

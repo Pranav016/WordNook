@@ -98,7 +98,7 @@ npm install
   * Now add this to the `.env` file
   ```
   SECRET_KEY = AlphaVio
-  URL = mongodb://localhost:27017/blogDB
+  URL = mongodb://localhost:27017/wordnookDB
   ```
 <br/>
 
