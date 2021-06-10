@@ -1,14 +1,13 @@
-
 name: Labeling new issue
 on:
-  issues:
-    types: ['opened']
+    issues:
+        types: ['opened']
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: Renato66/auto-label@v2
-        with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
-          ignore-comments: true
-          labels-synonyms: '{"GSSOC21":["GSSOC","GSSOC21","gssoc","Gssoc","GSSoC"]}'
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: Renato66/auto-label@v2
+              with:
+                  repo-token: ${{ secrets.GITHUB_TOKEN }}
+                  ignore-comments: true
+                  labels-synonyms: '{"LGMSOC21":["LGM-SOC","LGM-SOC21","lgm-soc","LGM-SOC'21","lgm-soc'21","LGM-soc", "lgm-SOC", "Lgm-soc"]}'
