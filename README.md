@@ -190,7 +190,7 @@ MAILGUN_API_KEY = <your-api-key>
 
 <img align="right" src="assets/event4.png" width = "120" height = "100"><b>4. Let's Grow More Summer of Code</b>
 
-- Let's Grow More Summer of Code is a one month long Open Source program designed to encourage student participation in open source software development under the guidance of mentors from the open source community. 
+- Let's Grow More Summer of Code is a one month long Open Source program organized by LetsGrowMore Community to encourage student participation in open source software development under the guidance of mentors from the open source community. 
 
 <hr>
 
