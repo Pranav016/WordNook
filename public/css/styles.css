@@ -1446,6 +1446,7 @@ div.scroll {
 }
 .testimonial-card-div {
 	width: 60vw;
+	transition: all 0.5s;
 }
 .testimonial-card-div:hover {
 	position: relative;
