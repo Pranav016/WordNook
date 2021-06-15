@@ -817,6 +817,11 @@ input[name='perPage'] {
 	color: rgb(255, 231, 10);
 }
 
+.footer-description{
+	text-shadow: none;
+	font-size: large;
+}
+
 .footerlinks > a {
 	text-decoration: none;
 	color: rgba(0, 0, 0, 0.4);
