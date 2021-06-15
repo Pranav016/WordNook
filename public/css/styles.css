@@ -807,7 +807,6 @@ input[name='perPage'] {
 
 .pr-3-per {
 	padding-right: 3%;
-	text-shadow: none;
 }
 
 .footer-bg-dark {
@@ -816,6 +815,11 @@ input[name='perPage'] {
 
 .footer-heading {
 	color: rgb(255, 231, 10);
+}
+
+.footer-description{
+	text-shadow: none;
+	font-size: large;
 }
 
 .footerlinks > a {
