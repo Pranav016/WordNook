@@ -157,13 +157,15 @@ show collections
 	```
 	**Check again for any errors that need to be resolved manually and if the application works fine after you lint the code.**   -->
 
-1. If your git shows an issue with your `package-lock.json` while installing dependencies or throws error that **lockfile version-2** is not compatible with your system
+1. - If your git shows an issue with your `package-lock.json` while installing dependencies or throws error that **lockfile version-2** is not compatible with your system
 	Then check your npm version by running command
 	``` 
 	 npm --version
 	```
-	**npm version should be 7 and above for lockfile version-2 that would come by default if you have a node version 15 and above.**  
+	- **npm version should be 7 and above for lockfile version-2 that would come by default if you have a node version 15 and above.**  
 	[List of Node.js releases and corresponding npm versions](https://nodejs.org/en/download/releases/)
+
+	- After upgrading your npm version, you can delete your `package-lock.json` file and run `npm install` again to fix the issue.
 
 
 ### Disclaimer-
