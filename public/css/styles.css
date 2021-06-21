@@ -1034,7 +1034,7 @@ input[name='perPage'] {
 }
 
 .delete-img-btn {
-	height: fit-content;
+	height: 40px;
 	margin-left: -2.5em;
 	z-index: 1;
 }
