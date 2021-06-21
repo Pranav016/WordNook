@@ -1026,7 +1026,9 @@ input[name='perPage'] {
 /* Profile Image Style */
 
 .profile-img {
-	height: 20vh;
+	width: 220px;
+        height: 220px;
+        object-fit: cover;
 	margin: 2% auto 3% auto;
 	border-radius: 50%;
 	box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
