@@ -32,11 +32,13 @@ router.post('/testimonial-wall', auth, async (req, res) => {
 		author: inputAuthor,
 		views: inputViews,
 	});
-	const com = await newtestimonial.save(function (err) {
-		if (err) {
-			console.log(err);
-		}
-	});
+
+	try {
+		await newtestimonial.save();
+	} catch (e) {
+		console.log(e);
+		return res.redirect('/error');
+	}
 	res.redirect('/testimonial-wall');
 });
 
