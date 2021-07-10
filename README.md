@@ -190,7 +190,11 @@ MAILGUN_API_KEY = <your-api-key>
 
 - GirlScript Summer of Code is the 3 month long Open Source program  conducted by GirlScript Foundation, started in 2018, with an aim to help beginners get started with Open Source Development while encouraging diversity.
 
-<img align="right" src="assets/event4.png" width = "120" height = "100"><b>4. Let's Grow More Summer of Code</b>
+<img align="right" src="assets\event4.png" width = "120" height = "100"><b>4. PClub Summer of Code</b>
+
+- PSOC( PClub Summer of Code ) is the 2 month long Open Source program during summers conducted by Programming Club, UIET, with an aim to help beginners get started with Open Source Development while encouraging Diversity .
+
+<img align="right" src="assets\event5.png" width = "120" height = "100"><b>5. Let's Grow More Summer of Code</b>
 
 - Let's Grow More Summer of Code is a one month long Open Source program organized by LetsGrowMore Community to encourage student participation in open source software development under the guidance of mentors from the open source community. 
 
