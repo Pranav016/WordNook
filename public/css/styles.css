@@ -1315,19 +1315,6 @@ svg {
 	width: 100%;
 }
 
-#contact-form input[type='email'],
-#contact-form input[type='text'],
-#contact-form textarea {
-	width: 100%;
-	border: 1px solid #ccc;
-	background: #fff;
-	margin: 0 0 5px;
-	padding: 15px;
-	background-color: #f2f6f8;
-	box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.11);
-	border-radius: 2rem;
-}
-
 .send-btn {
 	padding: 0.3em 0.3em;
 	min-width: 10em;
