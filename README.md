@@ -62,7 +62,9 @@
     - Recommended-
         - [Download VS Code](https://code.visualstudio.com/download)
         - [Download Atom](https://atom.io/)
-<br/>
+<br/> <br/>
+
+### Option 1 (Installation using NPM and MongoDB) 
 
 * Download [Node Js and npm(Node package manager)](https://nodejs.org/en/) (when you install Node, npm also gets installed by default)
 <br/>
@@ -119,7 +121,30 @@ or
 ```
 npm run dev
 ```
+<br/><br/>
+
+### Option 2 (Installation using Docker)
+
+* Check out our docker image at DockerHub: [Wordnook Image](https://hub.docker.com/r/alphavio/wordnook) or you can directly search `wordnook` on [DockerHub](https://hub.docker.com/search?q=&type=image)
+
+* Download and install [Docker](https://www.docker.com/products/docker-desktop).
+
+* Clone the repository by running command
+```
+git clone https://github.com/<your user-name>/WordNook.git
+```
+in your git bash.
 <br/>
+
+* Run command `cd WordNook`.
+<br/>
+
+* Then just run the following command:
+
+``` 
+docker-compose -f docker-compose.yml up 
+```
+<br/><br/>
 
 * Open link to view the website in your browser window if it doesn't open automatically.
 ```
