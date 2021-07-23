@@ -1,9 +1,10 @@
 version: '3'
 
 services:
-    app:
-        image: alphavio/wordnook:v1.0.0
-        ports:
+    development_app:
+        build:
+            context: .
+        ports: 
             - 3000:3000
         networks: 
             - wordnook-network

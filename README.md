@@ -121,11 +121,15 @@ or
 ```
 npm run dev
 ```
-<br/><br/>
+<br/>
+
+* Open link to view the website in your browser window if it doesn't open automatically.
+```
+http://localhost:3000/
+```
+<br/>
 
 ### Option 2 (Installation using Docker)
-
-* Check out our docker image at DockerHub: [Wordnook Image](https://hub.docker.com/r/alphavio/wordnook) or you can directly search `wordnook` on [DockerHub](https://hub.docker.com/search?q=&type=image)
 
 * Download and install [Docker](https://www.docker.com/products/docker-desktop).
 
@@ -139,18 +143,28 @@ in your git bash.
 * Run command `cd WordNook`.
 <br/>
 
-* Then just run the following command:
+* Run this command to start the project:
 
-``` 
-docker-compose -f docker-compose.yml up 
 ```
+docker-compose up --build 
+```
+
+* Now explore the project and make the changes as you want. Once the changes are made then run the following command again:
+``` 
+docker-compose up --build 
+```
+This would again create a new image with your changes and will use it to start the containers. Now when you visit `http://localhost:3000/` you would see your changes.
+
+* Once you are satisfied and want to make a PR then run following command:
+``` 
+docker-compose down 
+```
+This would stop all the running containers and will also delete them.
 <br/><br/>
 
-* Open link to view the website in your browser window if it doesn't open automatically.
-```
-http://localhost:3000/
-```
-<br/>
+* Check out our docker image at DockerHub: [Wordnook Image](https://hub.docker.com/r/alphavio/wordnook) or you can directly search `wordnook` on [DockerHub](https://hub.docker.com/search?q=&type=image) (This just for your reference and is not required for installation)
+
+* You can learn more about Docker and its implementation at [Docker Documentation](https://docs.docker.com)
 
 * You can learn more about EJS template engine and its syntax to know how we can use it inside our HTML using the [documentation](https://ejs.co/#docs)
 <br/>
