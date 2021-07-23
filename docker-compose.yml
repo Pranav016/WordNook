@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+    app:
+        image: alphavio/wordnook:v1.0.0
+        ports:
+            - 3000:3000
+        networks: 
+            - wordnook-network
+    mongodb:
+        image: mongo
+        ports: 
+            - 27017:27017
+        networks: 
+            - wordnook-network
+        volumes:
+            - mongodb:/data/db
+            - mongodb_config:/data/configdb
+networks: 
+    wordnook-network:
+        driver: bridge
+volumes:
+    mongodb:
+    mongodb_config:        
+        
