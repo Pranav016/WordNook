@@ -8,6 +8,9 @@ services:
             - 3000:3000
         networks: 
             - wordnook-network
+        environment: 
+            URL: mongodb://mongodb:27017/blogDB
+            SECRET_KEY: AlphaVio
     mongodb:
         image: mongo
         ports: 
