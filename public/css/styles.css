@@ -575,7 +575,7 @@ input[name='perPage'] {
 	text-align: center;
 }
 .button-cancel:hover {
-	background: var(--color-danger) !important;
+	background: #129fb4 !important;
 }
 
 .test-wall-btn {
