@@ -10,4 +10,4 @@ jobs:
               with:
                   repo-token: ${{ secrets.GITHUB_TOKEN }}
                   ignore-comments: true
-                  labels-synonyms: '{"LGMSOC21":["LGM-SOC","LGM-SOC21","lgm-soc","LGM-SOC'21","lgm-soc'21","LGM-soc", "lgm-SOC", "Lgm-soc"]}'
+                  labels-synonyms: '{"LGMSOC21":["LGMSOC21", "LGMSOC", "lgmsoc", "LGM-SOC","LGM-SOC21","lgm-soc","LGM-SOC21","lgm-soc21","LGM-soc", "lgm-SOC", "Lgm-soc"]}'
