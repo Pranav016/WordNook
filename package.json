@@ -55,7 +55,7 @@
 		"eslint-plugin-node": "^11.1.0",
 		"eslint-plugin-prettier": "^4.0.0",
 		"husky": "^8.0.1",
-		"lint-staged": "^12.3.7",
+		"lint-staged": "^13.0.3",
 		"nodemon": "^2.0.15",
 		"prettier": "^2.4.1"
 	}
